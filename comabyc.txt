@@ -1,0 +1,6 @@
+skrypt który:
+-wczytuje skrzynkę adresową.
+-kilka możliwości do kogo pisać wiadomość(np. tylko ludzie na n, ludzie z serwera wp.pl)
+-opcja czy wpisujesz sam czy z pliku(jak z pliku to podaj ścieżkę)
+wysyła maile do tych osób
+-wypisz raport
