@@ -1,0 +1,7 @@
+#!/bin/bash
+bash wysylanie.sh <<testtesttest
+czy to zadziala
+#oto jest pytanie
+testtesttest
+
+exit

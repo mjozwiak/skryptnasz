@@ -1,0 +1,8 @@
+#!/bin/bash
+
+function wysl {
+sendmail temat $1
+
+}
+
+wysl KaPeGie@gmail.com 
