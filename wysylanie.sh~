@@ -1,8 +1,9 @@
 #!/bin/bash
 
 function wysl {
-sendmail temat $1
+mail -s $1 $2
 
 }
 
-wysl KaPeGie@gmail.com 
+echo "Podaj temat wiadomosci:"
+$1 | wysl $1 KaPeGie@gmail.com 
