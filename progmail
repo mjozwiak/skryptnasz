@@ -1,0 +1,115 @@
+#!/bin/bash
+
+function MenuWybor
+{
+wybor=0
+while [ $wybor != 3 ]; do
+echo "  1. Wybór po nazwie użytkownika"
+echo "  2. Wybór po nazwie poczty"
+echo "  3. Cofnij do poprzedniego menu"
+read "d"
+if [ $d = 1 ]
+then
+echo "  Podaj całość lub część nazwy użytkownika"
+read "nazwa"
+echo "  Znalezione adresy:"
+  grep $nazwa adresy
+
+echo "  Wysyłać do znalezionych adresów?"
+echo "  1.Tak        2.Nie"
+read "e"
+if [ $e = 1 ]
+then
+
+               #Muszę najpierw zobaczyć Twoją funkcję!
+echo "Tu powinna być Twoja funkcja"
+fi
+
+fi
+
+if [ $d = 2 ]
+then
+echo "  Podaj całość lub część nazwy poczty"
+read "poczta"
+echo "  Znalezione adresy:"
+  grep $poczta adresy
+echo "  Wysyłać do znalezionych adresów?"
+echo "  1.Tak        2.Nie"
+read "f"
+if [ $f = 1 ]
+then
+
+            #Twoja funkcja
+echo "Twoja funkcja"
+fi
+
+fi
+
+if [ $d = 3 ]
+then
+wybor=3
+
+fi
+
+done
+}
+
+function MenuWys
+{
+wys=0
+while [ $wys != 3 ]; do
+echo "  1. Wyślij wiadomość do wszystkich zapisanych adresów"
+echo "  2. Wyślij wiadomość do wybranych adresów"
+echo "  3. Cofnij menu głównego"
+read "c"
+if [ $c = 1 ]
+then
+
+# Muszę najpierw zobaczyć Twoją funkcję!
+
+echo "Tu powinno być odwołanie do Twojej funkcji"
+
+fi
+
+if [ $c = 2 ]
+then
+    MenuWybor
+fi
+
+if [ $c = 3 ]
+then
+    wys=3
+fi
+
+done
+}
+
+                         #Główna fukncja
+
+echo "    Witaj w naszym programie mailowym!"
+echo "    Tworzenie pliku na maile"
+touch adresy
+echo "Menu:"
+glowna=0
+
+while [ $glowna != 3 ]; do
+echo "  1. Wyświetl zapisane adresy mailowe"
+echo "  2. Wyślij wiadomość"
+echo "  3. Wyjdź z programu"
+    read "a"
+    if [ $a = 1 ]
+    then
+	cat adresy
+    fi
+
+    if [ $a = 2 ]
+    then
+	MenuWys
+    fi
+
+    if [ $a = 3 ]
+	then
+	glowna=3
+	echo "  Do widzienia!"
+	fi
+done
