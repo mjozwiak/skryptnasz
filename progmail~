@@ -79,7 +79,6 @@ function MenuWybor
 		then
 		   MenuWiad nowe.txt
 		fi
-	   rm nowe.txt
 
 	fi
 
