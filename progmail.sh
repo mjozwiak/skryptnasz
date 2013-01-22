@@ -53,7 +53,7 @@ function MenuWybor
 	   echo "  Znalezione adresy:"
 	   #grep $nazwa adresy.txt>>nowe.txt
 	   grep .*@.*$nazwa.* adresy.txt >>nowe.txt #lepsze
-
+	   cat nowe.txt
 	   echo "  Wysyłać do znalezionych adresów?"
 	   echo "  1.Tak        2.Nie"
 	   read "e"
